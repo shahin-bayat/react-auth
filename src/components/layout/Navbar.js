@@ -13,6 +13,9 @@ const Navbar = () => {
           <i className='fas fa-sign-out-alt'></i> Logout
         </a>
       </li>
+      <li>
+        <Link to='/products'>Products</Link>
+      </li>
     </Fragment>
   )
 

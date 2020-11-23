@@ -1,0 +1,16 @@
+.product {
+  display: flex;
+  flex-direction: column;
+}
+.field-title {
+  display: block;
+  font-weight: bold;
+}
+
+.field-group {
+  display: flex;
+
+  p {
+    margin-left: 1rem;
+  }
+}

@@ -13,7 +13,7 @@ import {
 
 const AuthState = props => {
   const initialState = {
-    token: localStorage.getItem('token'),
+    token: localStorage.token,
     isAuthenticated: null,
     loading: false,
     error: null,
@@ -25,7 +25,7 @@ const AuthState = props => {
   const loadUser = () => {
     // normally we have a get user api to check token
     // so I implemented this way -> only if token exists
-    const token = localStorage.getItem('token')
+    const token = localStorage.token
 
     if (token) {
       dispatch({ type: USER_LOADED })
@@ -43,9 +43,7 @@ const AuthState = props => {
     }
     try {
       dispatch({ type: LOGIN_START })
-      console.log('before req')
       const res = await axios.post('/admin/api/login_check', user, config)
-      console.log('after req')
       dispatch({ type: LOGIN_SUCCESS, payload: res.data })
     } catch (error) {
       dispatch({ type: LOGIN_FAIL, payload: error.response.data.message })
