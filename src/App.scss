@@ -48,6 +48,7 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  margin-top: 2rem;
 
   &-block {
     display: block;
@@ -62,12 +63,17 @@ img {
 
 /* Forms */
 input[type='text'],
-input[type='password'] {
+input[type='password'],
+select {
   display: block;
   width: 100%;
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
+}
+
+select {
+  margin: 1rem 0;
 }
 
 input[type='submit'],
