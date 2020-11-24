@@ -39,8 +39,10 @@ const Product = props => {
           </div>
           <div>
             {/* there is probably something wrong with api, despite getting url, it is not a valid image address */}
-            {currentProduct.imageUrl.url && (
+            {currentProduct.imageUrl.url ? (
               <img src={currentProduct.imageUrl.url} alt='product image' />
+            ) : (
+              <code>image is loading...</code>
             )}
           </div>
         </div>
